@@ -34,8 +34,8 @@ npm run preview
 Tasks and goal notes are stored in localStorage. This keeps the MVP simple and private, but data does not sync between browsers or devices and can be lost if browser site data is cleared. No credentials or task content are sent to an application backend.
 
 ## Deployment
-For a Render Static Site using this subdirectory:
+The React version is deployed at https://task-manager-react-8up6.onrender.com. Its Render Static Site settings are:
 - Build command: `cd react-app && npm install && npm run build`
 - Publish directory: `react-app/dist`
 
-The root-level standalone app is currently served by the existing Render site.
+The root-level standalone version remains deployed separately at https://task-manager-q85c.onrender.com.
