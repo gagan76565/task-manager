@@ -1,0 +1,33 @@
+name: React app CI
+
+on:
+  push:
+    paths:
+      - "react-app/**"
+      - ".github/workflows/react-ci.yml"
+  pull_request:
+    paths:
+      - "react-app/**"
+      - ".github/workflows/react-ci.yml"
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: react-app
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: react-app/package-lock.json
+      - name: Install dependencies
+        run: npm install
+      - name: Run utility tests
+        run: npm test
+      - name: Build production assets
+        run: npm run build
