@@ -3,6 +3,7 @@
 A responsive personal task manager with a standalone static version and a React/Vite implementation.
 
 ## Live app
+- React deployment: https://task-manager-react-8up6.onrender.com
 - Standalone deployment: https://task-manager-q85c.onrender.com
 - GitHub source: https://github.com/gagan76565/task-manager
 
